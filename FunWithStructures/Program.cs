@@ -21,6 +21,12 @@ namespace FunWithStructures
             // Adjust the X and Y values.
             myPoint.Increment();
             myPoint.Display();
+
+            // Call custom constructor.
+            Point p2 = new Point(50, 60);
+
+            // Prints X=50, Y=60
+            p2.Display();
             Console.ReadLine();
         }
 
@@ -28,6 +34,13 @@ namespace FunWithStructures
         {
             public int X;
             public int Y;
+
+            // A custom constructor.
+            public Point(int XPos, int YPos)
+            {
+                X = XPos;
+                Y = YPos;
+            }
 
             // Add 1 to the (X, Y) position.
             public void Increment()
